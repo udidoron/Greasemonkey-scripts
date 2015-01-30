@@ -11,7 +11,10 @@
 // @grant       none
 // ==/UserScript==
 
-
+/**************************
+ *   OBSOLETE! DO NOT USE *
+ **************************/
+/*
 specificLoopScript = function() {
 
     //Converts time from the format "mm:ss" to seconds only.
@@ -118,3 +121,4 @@ specificLoopScript = function() {
 };
 
 document.body.appendChild(document.createElement('script')).innerHTML = "("+specificLoopScript+")()";
+*/
