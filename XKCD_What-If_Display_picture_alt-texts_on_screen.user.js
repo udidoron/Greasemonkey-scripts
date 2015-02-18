@@ -32,7 +32,12 @@ function addKeyboardNavigation() {
      document.addEventListener("keypress", function(event) {
           //'left' key code = 37, 'right' key code = 39
           if (event.keyCode === 37 && !firstPage) {
-               document.location="http://what-if.xkcd.com/"+String(currentPage-1);
+               //finding last site
+               var prevBtn = document.getElementsByClassName("nav-prev")[0];
+               var prevUrl = prevBtn.children[0].href;
+               var indexReg = /\d+/i;
+               var gotoUrl = "http://what-if.xkcd.com/"+parseInt(indexReg.exec(prevUrl));
+               document.location=gotoUrl;
           }
           else if (event.keyCode === 39 && !lastPage) {
                if (currentPage == "1") {
